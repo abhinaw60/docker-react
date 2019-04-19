@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t abhinav/docker-react -f Dokcerfile.dev .
+  - docker build -t abhinav/docker-react -f Dockerfile.dev .
 
 script:
   - docker run abhinav/docker-react npm run test -- --coverage
