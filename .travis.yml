@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - dokcer build -t abhinav/docker-react -f Dokcerfile.dev .
+
+script:
+  - docker run abhinav/docker-react npm run test -- --coverage
